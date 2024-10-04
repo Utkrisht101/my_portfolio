@@ -1,0 +1,134 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Navbar styling */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+    #navbar ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+        #navbar ul li a {
+            color: white;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+            #navbar ul li a:hover {
+                color: #ff6f61;
+            }
+
+/* Welcome section */
+#welcome-section {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+    #welcome-section h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+        #welcome-section h1 span {
+            color: #ff6f61;
+        }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Projects section */
+#projects {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+    #projects h2 {
+        margin-bottom: 50px;
+        font-size: 2.5rem;
+        color: #333;
+    }
+
+.project-tile {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border: 2px solid #ff6f61;
+    padding: 40px;
+    background-color: #f4f4f9;
+    transition: transform 0.3s ease;
+}
+
+    .project-tile:hover {
+        transform: translateY(-10px);
+    }
+
+    .project-tile a {
+        color: #333;
+        font-size: 1.2rem;
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+        text-transform: uppercase;
+    }
+
+        .project-tile a:hover {
+            color: #ff6f61;
+            text-decoration: underline;
+        }
+
+/* Media query */
+@media (max-width: 768px) {
+    #welcome-section h1 {
+        font-size: 2.5rem;
+    }
+
+    #projects h2 {
+        font-size: 2rem;
+    }
+
+    .project-tile {
+        padding: 20px;
+    }
+}
